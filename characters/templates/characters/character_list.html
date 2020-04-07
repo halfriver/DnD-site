@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>
+      Character List
+    </title>
+  </head>
+  <body>
+    {{ blub }}
+
+    {% for character in characters %}
+      <a href="{{character.id}}"><h1>{{character.name}}</h1></a>
+      <br>
+      {{character.description}}
+      <br><br>
+    {% endfor %}
+  </body>
+</html>
