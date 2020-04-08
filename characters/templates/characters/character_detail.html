@@ -1,17 +1,88 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html>
-  <head>
-    <title>
-      Character List
-    </title>
-  </head>
-  <body>
-    <h1>{{ object.name }}</h1><br><br>
-    {{ object.description }}
-    <br>
-    <img src={{ object.portrait }}>
-    <br>
-    <a href="..">GO BACK</a>
-  </body>
-</html>
+{% block title %}{{character.name}}{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-12 col-sm-1">
+    STR
+  </div>
+  <div class="col-12 col-sm-1">
+    {{character.strength}}
+  </div>
+  <div class="col-12 col-sm-10">
+    <div class="progress">
+      <div class="progress-bar bg-danger" role="progressbar" style="width: 75%"></div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-sm-1">
+    DEX
+  </div>
+  <div class="col-12 col-sm-1">
+    {{character.dexterity}}
+  </div>
+  <div class="col-12 col-sm-10">
+    <div class="progress">
+      <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"></div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-sm-1">
+    CON
+  </div>
+  <div class="col-12 col-sm-1">
+    {{character.constitution}}
+  </div>
+  <div class="col-12 col-sm-10">
+    <div class="progress">
+      <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-sm-1">
+    INT
+  </div>
+  <div class="col-12 col-sm-1">
+    {{character.intelligence}}
+  </div>
+  <div class="col-12 col-sm-10">
+    <div class="progress">
+      <div class="progress-bar bg-info" role="progressbar" style="width: 75%"></div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-sm-1">
+    WIS
+  </div>
+  <div class="col-12 col-sm-1">
+    {{character.wisdom}}
+  </div>
+  <div class="col-12 col-sm-10">
+    <div class="progress">
+      <div class="progress-bar bg-primary" role="progressbar" style="width: 75%"></div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-sm-1">
+    CHA
+  </div>
+  <div class="col-12 col-sm-1">
+    {{character.charisma}}
+  </div>
+  <div class="col-12 col-sm-10">
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 75%; background-color: #6b22d6;"></div>
+    </div>
+  </div>
+</div>
+
+<br>
+<a href="../" class="btn btn-info">Go back</a>
+{% endblock %}

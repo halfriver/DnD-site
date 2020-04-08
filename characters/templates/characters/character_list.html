@@ -1,19 +1,13 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html>
-  <head>
-    <title>
-      Character List
-    </title>
-  </head>
-  <body>
-    {{ blub }}
-
-    {% for character in characters %}
-      <a href="{{character.id}}"><h1>{{character.name}}</h1></a>
-      <br>
-      {{character.description}}
-      <br><br>
-    {% endfor %}
-  </body>
-</html>
+{% block title %}Character List{% endblock %}
+{% block content %}
+  <table style="width:100%; border:1px solid black">
+  {% for char in characters %}
+    <tr style="border:1px dashed black">
+      <td><a href="{{char.id}}/">{{char.name}}</a></td>
+      <td>{{char.description}}</td>
+    </tr>
+  {% endfor %}
+  </table>
+{% endblock %}

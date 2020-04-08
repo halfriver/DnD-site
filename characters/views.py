@@ -19,6 +19,7 @@ class CharacterList(ListView):
 
 class CharacterDetail(DetailView):
     model = Character
+    context_object_name = "character"
 
     def get_queryset(self, **kwargs):
         queryset = Character.objects.filter(id=self.kwargs['pk'])
