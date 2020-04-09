@@ -1,0 +1,12 @@
+
+.bg-purple {
+  background-color: #6b22d6;
+}
+
+#character-portrait {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  width: 50%;
+}

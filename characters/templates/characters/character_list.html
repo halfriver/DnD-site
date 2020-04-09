@@ -4,6 +4,9 @@
 {% block content %}
   <table style="width:100%; border:1px solid black">
   {% for char in characters %}
+    {% if characters.player == True %}
+
+    {% endif  %}
     <tr style="border:1px dashed black">
       <td><a href="{{char.id}}/">{{char.name}}</a></td>
       <td>{{char.description}}</td>
