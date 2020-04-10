@@ -4,89 +4,115 @@
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'css/character.css' %}">
 {% endblock %}
+
+{% block scripts %}
+  {% load static %}
+  <script src="{% static 'js/character_detail.js' %}"></script>
+{% endblock %}
+
 {% block title %}{{character.name}}{% endblock %}
 
 {% block content %}
+<div class="character-container">
+  <h1>
+    {{character.prename}} {{character.name}} {{character.postname}}
+  </h1>
+</div>
+
 <div class="row">
   <div class="col-12">
     <img id="character-portrait" src="{{character.portrait.url}}"/>
   </div>
 </div>
-<div class="row">
-  <div class="col-12 col-sm-1">
-    STR
-  </div>
-  <div class="col-12 col-sm-1">
-    {{character.strength}}
-  </div>
-  <div class="col-12 col-sm-10">
-    <div class="progress">
-      <div class="progress-bar bg-danger" role="progressbar" style="width: 75%"></div>
+
+<div class="character-container">
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-12" style="height:100px">
+          <img src="{% static 'img/strength.png' %}" class="ability-score-img">
+          <div class="ability-score">{{character.strength}}</div>
+          <div class="ability-score-mod">{{character.strength}}</div>
+        </div>
+        <div class="col-lg-9 col-md-8 d-none d-lg-block d-md-block">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12 col-sm-1">
-    DEX
-  </div>
-  <div class="col-12 col-sm-1">
-    {{character.dexterity}}
-  </div>
-  <div class="col-12 col-sm-10">
-    <div class="progress">
-      <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"></div>
+    <div class="col">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <img src="{% static 'img/dexterity.png' %}" class="ability-score-img">
+          <div class="ability-score">{{character.dexterity}}</div>
+          <div class="ability-score-mod">{{character.dexterity}}</div>
+        </div>
+        <div class="col-lg-9 col-md-8 d-none d-lg-block d-md-block">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12 col-sm-1">
-    CON
-  </div>
-  <div class="col-12 col-sm-1">
-    {{character.constitution}}
-  </div>
-  <div class="col-12 col-sm-10">
-    <div class="progress">
-      <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
+    <div class="w-100 d-none d-md-block"></div>
+    <div class="col">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <img src="{% static 'img/constitution.png' %}" class="ability-score-img">
+          <div class="ability-score">{{character.constitution}}</div>
+          <div class="ability-score-mod">{{character.constitution}}</div>
+        </div>
+        <div class="col-lg-9 col-md-8 d-none d-lg-block d-md-block">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12 col-sm-1">
-    INT
-  </div>
-  <div class="col-12 col-sm-1">
-    {{character.intelligence}}
-  </div>
-  <div class="col-12 col-sm-10">
-    <div class="progress">
-      <div class="progress-bar bg-info" role="progressbar" style="width: 75%"></div>
+    <div class="w-100 d-block d-md-none"></div>
+    <div class="col">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <img src="{% static 'img/intelligence.png' %}" class="ability-score-img">
+          <div class="ability-score">{{character.intelligence}}</div>
+          <div class="ability-score-mod">{{character.intelligence}}</div>
+        </div>
+        <div class="col-lg-9 col-md-8 d-none d-lg-block d-md-block">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12 col-sm-1">
-    WIS
-  </div>
-  <div class="col-12 col-sm-1">
-    {{character.wisdom}}
-  </div>
-  <div class="col-12 col-sm-10">
-    <div class="progress">
-      <div class="progress-bar bg-primary" role="progressbar" style="width: 75%"></div>
+    <div class="w-100 d-none d-md-block"></div>
+    <div class="col">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <img src="{% static 'img/wisdom.png' %}" class="ability-score-img">
+          <div class="ability-score">{{character.wisdom}}</div>
+          <div class="ability-score-mod">{{character.wisdom}}</div>
+        </div>
+        <div class="col-lg-9 col-md-8 d-none d-lg-block d-md-block">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-12 col-sm-1">
-    CHA
-  </div>
-  <div class="col-12 col-sm-1">
-    {{character.charisma}}
-  </div>
-  <div class="col-12 col-sm-10">
-    <div class="progress">
-      <div class="progress-bar bg-purple" role="progressbar" style="width: 75%"></div>
+    <div class="col">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <img src="{% static 'img/charisma.png' %}" class="ability-score-img">
+          <div class="ability-score">{{character.charisma}}</div>
+          <div class="ability-score-mod">{{character.charisma}}</div>
+        </div>
+        <div class="col-lg-9 col-md-8 d-none d-lg-block d-md-block">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-purple" role="progressbar" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

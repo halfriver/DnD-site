@@ -1,12 +1,64 @@
 
+.container {
+  position: relative;
+}
+
+.character-container {
+  position: relative;
+  text-align: center;
+  border: 2px solid lightgrey;
+  border-radius: 15px;
+}
+
+.ability-score-img {
+  position: relative;
+  text-align: center;
+  height: 100px;
+  padding-left: 0px;
+}
+
+.ability-score {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.ability-score-mod {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .bg-purple {
   background-color: #6b22d6;
+}
+
+.row {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display:flex;
+  align-items:center;
+}
+
+.progress {
+  height: 20px;
+}
+.progress-bar {
+  margin:0;
 }
 
 #character-portrait {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   width: 50%;
+  max-width: 500px;
+}
+
+h1 {
+  text-align: center;
 }
