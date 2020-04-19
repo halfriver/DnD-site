@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, TemplateView, DetailView
 from characters.models import Character
 
-class CharacterList(ListView):
+class CharactersList(ListView):
     model = Character
     context_object_name = "characters"
 

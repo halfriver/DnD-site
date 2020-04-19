@@ -4,7 +4,7 @@
 }
 
 .character-container {
-  position: relative;
+  padding: 0px 10px 0px 10px;
   text-align: center;
   border: 2px solid lightgrey;
   border-radius: 15px;
@@ -34,6 +34,24 @@
 
 .bg-purple {
   background-color: #6b22d6;
+}
+.bg-grey {
+  background-color: #969696 !important;
+}
+.bg-blue {
+  background-color: #3a5db5;
+}
+.bg-red {
+  background-color: #b53a3a;
+}
+.bg-green {
+  background-color: #32a852;
+}
+.bg-teal {
+  background-color: #417d91;
+}
+.bg- {
+  background-color: #;
 }
 
 .row {

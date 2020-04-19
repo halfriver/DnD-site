@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block title %}Character List{% endblock %}
+
+{% block nav-characters %}active{% endblock %}
+
 {% block content %}
   <table style="width:100%; border:1px solid black">
   {% for char in characters %}

@@ -8,6 +8,8 @@ class Character(models.Model):
     postname = models.CharField(max_length=30, blank=True, default="")
     player = models.BooleanField(null=True)
     status = models.CharField(max_length=10, choices=STATUS, default='unknown')
+    race = models.CharField(max_length=30, blank=True, default="")
+    game_class = models.CharField(max_length=30, blank=True, default="")
     portrait = models.ImageField(upload_to='character_portraits', null=True)
     description = models.TextField(blank=True)
     notes = models.TextField(blank=True)

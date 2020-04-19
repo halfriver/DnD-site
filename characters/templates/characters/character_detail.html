@@ -12,6 +12,8 @@
 
 {% block title %}{{character.name}}{% endblock %}
 
+{% block nav-characters %}active{% endblock %}
+
 {% block content %}
 <div class="character-container">
   <h1>
@@ -36,7 +38,7 @@
         </div>
         <div class="col-lg-9 col-md-8 d-none d-lg-block d-md-block">
           <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 75%"></div>
+            <div class="progress-bar progress-bar-striped bg-red" role="progressbar" style="width: 0%"></div>
           </div>
         </div>
       </div>
@@ -50,7 +52,7 @@
         </div>
         <div class="col-lg-9 col-md-8 d-none d-lg-block d-md-block">
           <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%"></div>
+            <div class="progress-bar progress-bar-striped bg-red" role="progressbar" style="width: 0%"></div>
           </div>
         </div>
       </div>
@@ -65,7 +67,7 @@
         </div>
         <div class="col-lg-9 col-md-8 d-none d-lg-block d-md-block">
           <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%"></div>
+            <div class="progress-bar progress-bar-striped bg-red" role="progressbar" style="width: 0%"></div>
           </div>
         </div>
       </div>
@@ -80,7 +82,7 @@
         </div>
         <div class="col-lg-9 col-md-8 d-none d-lg-block d-md-block">
           <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 75%"></div>
+            <div class="progress-bar progress-bar-striped bg-red" role="progressbar" style="width: 0%"></div>
           </div>
         </div>
       </div>
@@ -95,7 +97,7 @@
         </div>
         <div class="col-lg-9 col-md-8 d-none d-lg-block d-md-block">
           <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 75%"></div>
+            <div class="progress-bar progress-bar-striped bg-red" role="progressbar" style="width: 0%"></div>
           </div>
         </div>
       </div>
@@ -109,7 +111,7 @@
         </div>
         <div class="col-lg-9 col-md-8 d-none d-lg-block d-md-block">
           <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-purple" role="progressbar" style="width: 75%"></div>
+            <div class="progress-bar progress-bar-striped bg-red" role="progressbar" style="width: 0%"></div>
           </div>
         </div>
       </div>
@@ -118,5 +120,5 @@
 </div>
 
 <br>
-<a href="../" class="btn btn-info">Go back</a>
+<a href="{% url 'characters_list' %}" class="btn btn-info">Go back</a>
 {% endblock %}
