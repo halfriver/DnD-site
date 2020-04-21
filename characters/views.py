@@ -20,11 +20,14 @@ class CharactersList(ListView):
 class CharacterDetail(DetailView):
     model = Character
     context_object_name = "character"
-
-    def get_queryset(self, **kwargs):
-        queryset = Character.objects.filter(id=self.kwargs['pk'])
-        return queryset
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
+    template_name = "characters/character_detail.html"
+    slug_field = 'name'
+    slug_url_kwarg = 'name'
+    #
+    # def get_queryset(self, **kwargs):
+    #     queryset = Character.objects.filter(name=self.kwargs['prename'])
+    #     return queryset
+    #
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     return context
