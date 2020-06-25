@@ -8,7 +8,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Index.as_view(), name='index'),
     path('characters/', include('characters.urls')),
-    path('campaign/', include('campaign.urls'))
+    path('campaign/', include('campaign.urls')),
+    path('npcmanager/', include('npcmanager.urls'))
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

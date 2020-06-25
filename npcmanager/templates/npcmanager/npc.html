@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block styles %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/npcmanager.css' %}">
+{% endblock %}
+
+{% block scripts %}
+  {% load static %}
+  <script src="{% static 'js/npcmanager.js' %}"></script>
+{% endblock %}
+
+{% block title %}NPC Manager{% endblock %}
+
+{% block nav-characters %}active{% endblock %}
+
+{% block content %}
+  <ul class="nav nav-tabs">
+    {% for char in characters %}
+      {% if char.party == True and char.player == False and char.status == 'alive' %}
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#{{char}}">{{char}}</a>
+        </li>
+      {% endif  %}
+    {% endfor %}
+  </ul>
+
+  <div class="tab-content">
+    {% for char in characters %}
+      {% if char.party == True and char.player == False and char.status == 'alive' %}
+        <div id="{{char}}" class="tab-pane container active">
+          <p>character HP, AC, Initiative bonus</p>
+          <p>raw ability scores</p>
+          <p>attack rolls + weapon damage</p>
+        </div>
+      {% endif  %}
+    {% endfor %}
+  </div>
+
+{% endblock %}
